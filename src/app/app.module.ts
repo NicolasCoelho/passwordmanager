@@ -7,9 +7,16 @@ import { AppComponent } from './app.component';
 
 import {ButtonModule} from 'primeng/button';
 
+import { AuthenticateComponent } from './pages/authenticate/authenticate.component';
+import { HomeComponent } from './pages/home/home.component';
+import { IntroComponent } from './pages/intro/intro.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthenticateComponent,
+    HomeComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
