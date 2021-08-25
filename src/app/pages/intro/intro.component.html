@@ -1,0 +1,38 @@
+<div class="container">
+
+  <app-language-selector *ngIf='step === 1' (languageSelectionEvent)="nextStep()"></app-language-selector>
+
+  <div *ngIf="step === 2" class="">
+    <h1>{{ 'intro.title' | translate }}</h1>
+    <p>
+      {{ 'intro.description' | translate }}
+      <br>
+      {{ 'intro.description2' | translate }}
+    </p>
+    <div>
+      <h5>{{ 'intro.nameLabel' | translate }}</h5>
+      <input type="text" pInputText [(ngModel)]="user.name" class="full"/>
+      <h5>{{ 'intro.passwordLabel' | translate }}</h5>
+      <p-password [(ngModel)]="user.password" [toggleMask]="true" styleClass="full" inputStyleClass="full">
+        <ng-template pTemplate="header">
+          <h6>{{ 'intro.passwordPickerTitle' | translate }}</h6>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <p-divider></p-divider>
+          <p class="p-mt-2">{{ 'intro.passwordSuggestionTitle' | translate }}</p>
+          <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
+            <li>{{ 'intro.passwordSuggestion1' | translate }}</li>
+            <li>{{ 'intro.passwordSuggestion2' | translate }}</li>
+            <li>{{ 'intro.passwordSuggestion3' | translate }}</li>
+            <li>{{ 'intro.passwordSuggestion4' | translate }}</li>
+          </ul>
+        </ng-template>
+      </p-password>
+      <h5>{{ 'intro.confirmPasswordLabel' | translate }}</h5>
+      <p-password [(ngModel)]="confirmPassword" [toggleMask]="true" [feedback]="false"  styleClass="full" inputStyleClass="full"></p-password>
+      <div class="submit-wrapper">
+        <p-button label="{{ 'intro.saveUserButtonLabel' | translate }}" styleClass="p-button full" (onClick)="save($event)"></p-button>
+      </div>
+    </div>
+  </div>
+</div>

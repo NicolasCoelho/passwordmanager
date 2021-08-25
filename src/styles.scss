@@ -1,5 +1,21 @@
+@import 'fonts.scss';
+@import 'vars.scss';
+
+:root, :root *:not(i){
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--surface-a);
+  background-color: $bg1;
+  color: $textPrimary;
+}
+
+.full {
+  width: 100%;
+}
+
+.submit-wrapper {
+  padding: 25px 0px;
 }

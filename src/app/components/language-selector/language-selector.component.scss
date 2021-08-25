@@ -1,0 +1,9 @@
+:host {
+  width: 400px;
+  .language-card {
+    width: 100%;
+    .p-listbox .p-listbox-list .p-listbox-item {
+      justify-content: center;
+    }
+  }
+}
