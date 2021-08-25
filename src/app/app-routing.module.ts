@@ -11,8 +11,8 @@ import { CanActivateAuthenticate } from './_guards/authenticate';
 import { CanActivateHome } from './_guards/home';
 
 const routes: Routes = [
-  { path: 'intro', component: IntroComponent, canActivate: [CanActivateIntro] },
-  { path: '', component: AuthenticateComponent, canActivate: [CanActivateAuthenticate] },
+  { path: '', component: IntroComponent, canActivate: [CanActivateIntro] },
+  { path: 'intro', component: AuthenticateComponent, canActivate: [CanActivateAuthenticate] },
   { path: 'home', component: HomeComponent, canActivate: [CanActivateHome] }
 ];
 
