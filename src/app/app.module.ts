@@ -12,6 +12,7 @@ import { IntroComponent } from './pages/intro/intro.component';
 
 // Custom Components
 import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
+import { Database } from './_database/db';
 
 // PrimeNG Modules
 import { ButtonModule } from 'primeng/button';
@@ -60,7 +61,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [
+    Database
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

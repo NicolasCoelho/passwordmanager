@@ -1,0 +1,11 @@
+{
+  "user": {
+    "name": "",
+    "passwordHash": ""
+  },
+  "preferences": {
+    "firstTime": true,
+    "lang": 0
+  },
+  "passwords": []
+}
