@@ -1,11 +1,1 @@
-{
-  "user": {
-    "name": "",
-    "passwordHash": ""
-  },
-  "preferences": {
-    "firstTime": true,
-    "lang": 0
-  },
-  "passwords": []
-}
+{"user":{"name":"Nicolas","passwordHash":"20011999"},"preferences":{"firstTime":false,"lang":"pt"},"passwords":[]}

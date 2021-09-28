@@ -1,1 +1,15 @@
-<p>authenticate works!</p>
+<div class="container">
+  <div class="form-wrapper">
+    <h1>{{ 'authenticate.title' | translate }}, <br> {{userName}}</h1>
+    <div>
+      <div class="p-field">
+        <label for="confirmPassword">{{ 'authenticate.passwordLabel' | translate }}</label>
+        <p-password id="confirmPassword" [(ngModel)]="password" [toggleMask]="true" [feedback]="false"  styleClass="full" inputStyleClass="full"></p-password>
+        <small *ngIf="passwordError" id="confirmPassword-help" class="p-error">{{ 'authenticate.passwordError' | translate }}</small>
+      </div>
+      <div class="submit-wrapper">
+        <p-button label="{{ 'authenticate.enterButtonLabel' | translate }}" styleClass="p-button full" (onClick)="login()"></p-button>
+      </div>
+    </div>
+  </div>
+</div>

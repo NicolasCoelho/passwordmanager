@@ -1,11 +1,11 @@
 export interface Data {
   user: {
-    name: String
-    passwordHash: String
+    name: string
+    passwordHash: string
   },
   preferences: {
     firstTime: boolean
-    lang: Number
+    lang: string
   }
   passwords: Array<any>
 }

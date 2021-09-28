@@ -17,6 +17,12 @@
     "passwordSuggestion4": "Mínimo 8 caracteres",
     "saveUserButtonLabel": "Salvar"
   },
+  "authenticate": {
+    "title": "Bem Vindo",
+    "passwordLabel": "Senha",
+    "passwordError": "Senha incorreta",
+    "enterButtonLabel": "Entrar"
+  },
   "primeng": {
     "startsWith": "Starts with",
     "contains": "Contém",

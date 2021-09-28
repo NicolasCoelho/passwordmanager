@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { Database } from 'src/app/_database/db';
 
 import { Language } from 'src/app/_interfaces/language';
 
@@ -17,7 +18,7 @@ export class LanguageSelectorComponent implements OnInit {
 
   @Output() languageSelectionEvent = new EventEmitter<Boolean>();
 
-  constructor(private config: PrimeNGConfig, private translateService: TranslateService) {
+  constructor(private config: PrimeNGConfig, private translateService: TranslateService, private db: Database) {
     this.languages = [
       {name: "English", code: 'en'},
       {name: "Português", code: 'pt'},
@@ -32,6 +33,7 @@ export class LanguageSelectorComponent implements OnInit {
   translate() {
     this.translateService.use(this.selectedLanguage.code);
     this.translateService.get('primeng').subscribe(res => this.config.setTranslation(res));
+    this.db.setLanguage(this.selectedLanguage.code);
     this.emitLanguageSelection();
   }
 

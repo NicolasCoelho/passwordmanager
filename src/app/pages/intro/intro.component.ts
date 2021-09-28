@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, NgModule, OnInit, ViewEncapsulation } from '@angular/core';
 import { User } from 'src/app/_interfaces/user';
 import { Database } from 'src/app/_database/db';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-intro',
@@ -30,7 +31,7 @@ export class IntroComponent implements OnInit {
 
   public errors: any;
 
-  constructor(private db: Database) {
+  constructor(private db: Database, private router: Router) {
     this.step = 1;
     this.user = {name: '', password: ''};
     this.confirmPassword = '';
@@ -53,6 +54,7 @@ export class IntroComponent implements OnInit {
       this.db.setUser(this.user.name, this.user.password);
       this.db.setFirstTime();
       await this.db.saveData();
+      this.router.navigate(['home']);
     } else {
       this.setError();
     }
