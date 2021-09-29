@@ -13,7 +13,7 @@ import { CanActivateHome } from './_guards/home';
 const routes: Routes = [
   { path: '', component: AuthenticateComponent, canActivate: [CanActivateAuthenticate] },
   { path: 'intro', component: IntroComponent },
-  { path: 'home', component: HomeComponent, canActivate: [CanActivateHome] }
+  { path: 'home', component: HomeComponent, canActivate: [CanActivateHome]}
 ];
 
 @NgModule({
